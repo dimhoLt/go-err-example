@@ -26,6 +26,14 @@ methods! This makes sure the package name is only added once.
 Regardless of the error type returned, the return value declared in the function should **always** be `error`, and never
 the custom error declared in the package.
 
+### Scope
+Errors should always return errors that represent their package and their functionality, and may convert errors to
+errors of its own type as seen fit.
+
+An example is a package that talks to a database, but doesn't want the user of the package to care about the underlying
+database implementation. Instead of then returning an `mgo.NotFound` error, which would break functionality if the
+package would start returning `pgsql.NotFound`, it may convert those into its own errors with the same name.
+
 
 ## Examples
 To show how the code is expected to work, run `$ go run main.go`. It will showcase both an implementation of an error
