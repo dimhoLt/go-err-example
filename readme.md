@@ -1,5 +1,4 @@
 # Golang Error Handling
-
 This project is intended to be a demo of error handling using Golang.
 
 ## Guidelines
@@ -26,3 +25,11 @@ methods! This makes sure the package name is only added once.
 ### Returns
 Regardless of the error type returned, the return value declared in the function should **always** be `error`, and never
 the custom error declared in the package.
+
+
+## Examples
+To show how the code is expected to work, run `$ go run main.go`. It will showcase both an implementation of an error
+handling in code, and simple printing of errors - what most people currently do.
+
+For an example on how this can be used in real life, run `$ go run server.go`, which will send the proper HTTP status
+codes depending on the errors it receives.

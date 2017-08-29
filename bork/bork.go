@@ -16,9 +16,9 @@ func Bork(out string) error {
 		return &ErrUnborkable
 	}
 
+	// When we get a non-bork error, we'll add the "bork" prefix (package name) here, since this method is exported.
 	err := simulateExternalPackage(out)
 	if err != nil {
-		// When we get a non-bork error, we'll add the "bork" prefix (package name) here, since this method is exported.
 		return fmt.Errorf("bork: %v", err)
 	}
 
