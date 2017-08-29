@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"bitbucket.org/dimholt/go-err-example/bork"
+	"github.com/dimholt/go-err-example/bork"
 )
 
 // This file is intended as an example for how you can implement this error handling to convert different errors to

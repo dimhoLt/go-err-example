@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-	"bitbucket.org/dimholt/go-err-example/bork"
-	"bitbucket.org/dimholt/go-err-example/stuff"
+	"github.com/dimholt/go-err-example/bork"
+	"github.com/dimholt/go-err-example/stuff"
 )
 
 var stuffParams []interface{}
